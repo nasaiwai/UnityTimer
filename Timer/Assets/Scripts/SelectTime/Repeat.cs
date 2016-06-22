@@ -39,8 +39,8 @@ public class Repeat : MonoBehaviour {
 		return ApplicationLevel.repeat;
 	}
 
-	void isClicked() {
-		isclicked = !isclicked;
+	bool isClicked() {
+		return isclicked;
 	}	
 
 	void OnGUI() {
@@ -55,7 +55,7 @@ public class Repeat : MonoBehaviour {
 		}
 
 		if (GUI.Button (new Rect (270, 232, 25, 25), "", check)) {
-			isClicked ();
+			isclicked = !isclicked;
 		}
 		if (isclicked == true) {
 			GUI.Button (new Rect (270, 232, 25, 25), "", clicked);
