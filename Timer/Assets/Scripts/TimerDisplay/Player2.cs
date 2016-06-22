@@ -7,13 +7,15 @@ public class Player2 : MonoBehaviour {
 
 	public Texture2D textureToDisplay;
 	float P2_timeRemaining;
-	int P2_hours, P2_minutes, P2_seconds;
+	int P2_hours, P2_minutes, P2_seconds, i;
 
 	// Use this for initialization
 	void Start () {
-		P2_timeRemaining = Int32.Parse(ApplicationLevel.strHours) * 3600 
-			+ Int32.Parse(ApplicationLevel.strMinutes) * 60 
-			+ Int32.Parse(ApplicationLevel.strSeconds);
+		i = 0;
+		P2_timeRemaining = ApplicationLevel.timers [i];
+		//P2_timeRemaining = Int32.Parse(ApplicationLevel.strHours) * 3600 
+		//	+ Int32.Parse(ApplicationLevel.strMinutes) * 60 
+		//	+ Int32.Parse(ApplicationLevel.strSeconds);
 		P2_hours = (int)P2_timeRemaining / 3600;
 		P2_minutes = (int)P2_timeRemaining / 60;
 		P2_seconds = (int)P2_timeRemaining % 60;
@@ -67,8 +69,15 @@ public class Player2 : MonoBehaviour {
 				}
 			}
 		} 
-		else {
-			GUI.Label (new Rect (250, 100, 80, 30), "Time's up", mystyle);
+		else {i++;
+			if (i < ApplicationLevel.timers.Count) {
+				P2_timeRemaining = ApplicationLevel.timers [i];
+				P2_hours = (int)P2_timeRemaining / 3600;
+				P2_minutes = (int)P2_timeRemaining / 60;
+				P2_seconds = (int)P2_timeRemaining % 60;
+			} else {
+				GUI.Label (new Rect (250, 100, 80, 30), "00:00", mystyle);
+			}
 		}
 	}
 }
