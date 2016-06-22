@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Repeat : MonoBehaviour {
 
-	public GUIStyle mystyle, check;
+	public GUIStyle mystyle, check, clicked;
 	public Texture right_arrow, left_arrow;
+	private bool isclicked;
 	//public int times;
 
 	private static Repeat repeatInstance;
@@ -21,6 +22,7 @@ public class Repeat : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		isclicked = false;
 	}
 	
 	// Update is called once per frame
@@ -37,17 +39,26 @@ public class Repeat : MonoBehaviour {
 		return ApplicationLevel.repeat;
 	}
 
+	void isClicked() {
+		isclicked = !isclicked;
+	}	
+
 	void OnGUI() {
-		GUI.Button (new Rect (270, 232, 25, 25), "");
 		GUI.Button (new Rect (300, 235, 50, 25), "Repeat", mystyle);
 		GUI.Button (new Rect (380, 230, 40, 30), ApplicationLevel.repeat.ToString());
 		GUI.Button (new Rect (455, 235, 80, 25), "times", mystyle);
-
 		if (GUI.Button (new Rect (350, 230, 40, 30), left_arrow, mystyle)) {
 			ApplicationLevel.repeat--;
 		}
 		if (GUI.Button (new Rect (427, 230, 40, 30), right_arrow, mystyle)) {
 			ApplicationLevel.repeat++;
+		}
+
+		if (GUI.Button (new Rect (270, 232, 25, 25), "", check)) {
+			isClicked ();
+		}
+		if (isclicked == true) {
+			GUI.Button (new Rect (270, 232, 25, 25), "", clicked);
 		}
 	}
 }

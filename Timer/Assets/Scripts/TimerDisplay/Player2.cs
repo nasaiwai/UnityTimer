@@ -17,7 +17,7 @@ public class Player2 : MonoBehaviour {
 		//	+ Int32.Parse(ApplicationLevel.strMinutes) * 60 
 		//	+ Int32.Parse(ApplicationLevel.strSeconds);
 		P2_hours = (int)P2_timeRemaining / 3600;
-		P2_minutes = (int)P2_timeRemaining / 60;
+		P2_minutes = (int)(P2_timeRemaining - P2_hours * 3600) / 60;
 		P2_seconds = (int)P2_timeRemaining % 60;
 		//button1.GetComponentInChildren<Text>().text = "la di da";
 	}
@@ -29,7 +29,7 @@ public class Player2 : MonoBehaviour {
 			if(TimerManager.timerManager.isMyTurn == true) {
 				P2_timeRemaining -= Time.deltaTime;
 				P2_hours = (int)P2_timeRemaining / 3600;
-				P2_minutes = (int)P2_timeRemaining / 60;
+				P2_minutes = (int)(P2_timeRemaining - P2_hours * 3600) / 60;
 				P2_seconds = (int)P2_timeRemaining % 60;
 			}
 		}
@@ -73,7 +73,7 @@ public class Player2 : MonoBehaviour {
 			if (i < ApplicationLevel.timers.Count) {
 				P2_timeRemaining = ApplicationLevel.timers [i];
 				P2_hours = (int)P2_timeRemaining / 3600;
-				P2_minutes = (int)P2_timeRemaining / 60;
+				P2_minutes = (int)(P2_timeRemaining - P2_hours * 3600) / 60;
 				P2_seconds = (int)P2_timeRemaining % 60;
 			} else {
 				GUI.Label (new Rect (250, 100, 80, 30), "00:00", mystyle);
