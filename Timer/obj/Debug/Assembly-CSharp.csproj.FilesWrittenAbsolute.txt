@@ -1,0 +1,17 @@
+/Users/NasaIwai/Timer/Temp/bin/Debug/UnityEngine.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/UnityEditor.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/UnityEngine.Networking.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Mono.Cecil.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Unity.DataContract.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Users/NasaIwai/Timer/Temp/bin/Debug/Unity.CecilTools.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/NasaIwai/Timer/Temp/bin/Debug/Assembly-CSharp.dll.mdb
+/Users/NasaIwai/Timer/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/NasaIwai/Timer/obj/Debug/Assembly-CSharp.dll
+/Users/NasaIwai/Timer/obj/Debug/Assembly-CSharp.dll.mdb
